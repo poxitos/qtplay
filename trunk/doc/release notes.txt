@@ -1,0 +1,33 @@
+qtplay
+release notes
+
+version 1.4.0pre9
++	cleaned up metadata extraction a little, offer artist fallback to performer
+
+version 1.4.0pre8
++	fixed an over-retain bug with the ^C timer which caused the player to not
+	dealloc and therefore not re-enable terminal echo
+	
+version 1.4.0pre7
++	added support for narrow terminals & sigwinch
+
+version 1.4.0pre6
++	added support for iTunes metadata (i.e. .m4a files)
+
+version 1.4.0pre5
++	added own audioscrobbler client id & version number
++	fixed an autorelease(?) bug in the alias resolver
+
+version 1.4.0pre4
++	added cleanup routines to the player, fixes terminal echo after exit in bash
+
+version 1.4.0pre3
+-	fix displayTimer segfault on exit?
++	add pgup/pgdown
++	add countdown display mode
+
+version 1.4.0pre2
++	fixed scrobbler submission of song information containing '&'
+
+version 1.4.0pre1
++	first test release
