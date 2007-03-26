@@ -1,0 +1,44 @@
+qtplay 1.4.0pre9
+copyright (c) 2006 ritchie argue
+
+based on Quicktime Player by Sarah Childers
+
+see qtplay --help for command-line arguments. notably you can save last.fm login
+information with the following command:
+
+qtplay -n username -p password --savePrefs
+
+
+interactive control:
+q / esc				stop playing and quit
+
+up / down			seek backward/forward 10% of track duration
+<- / ->				seek backward/forward 10 seconds
+pgup / pgdn			seek backward/forward 1 minute
+home / end			go to track start/end
+.					go to track end
+
+/					toggle time display direction
+<space>				toggle pause
+- / +				decrease/increase volume
+0					toggle mute
+
+ctrl-c (SIGINT)		next track (single-click) / quit (double-click)
+ctrl-z (SIGTSTP)	pause
+fg (SIGCONT)		resume
+
+
+known bugs:
+- the first time a protected audio track is played, qtplay may crash. subsequent
+	plays appear to work fine. please contact me if you find this to be the case
+	
+	
+to do:
+- sort out licensing
+- test/support last.fm timeout and relogin
+- refactor player/transport/stdin/signal
+- refactor last.fm login into a non-echoing interactive setup
+- man page
+- configurable interactive keys
+- support lastfm://
+- handle stdin file list
