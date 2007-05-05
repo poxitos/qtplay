@@ -1,0 +1,12 @@
+#summary How to build qtplay
+
+= Introduction =
+
+The only tricky step to building qtplay is first building argtable.
+
+
+= Details =
+
+To build argtable, first download it from http://argtable.sourceforge.net/
+Next, configure your build environment to create a Universal Binary of argtable, following the instructions here:
+http://developer.apple.com/technotes/tn2005/tn2137.html
