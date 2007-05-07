@@ -1,4 +1,4 @@
-#summary Statically linking with argtable
+#summary How to statically link qtplay against a Universal binary of argtable.
 #labels Featured,Phase-Implementation
 
 = Introduction =
