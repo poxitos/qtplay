@@ -1,6 +1,9 @@
 qtplay
 release notes
 
+version 1.4.0
++	fixed a double free crash that occurred on short tracks
+
 version 1.4.0pre9
 +	cleaned up metadata extraction a little, offer artist fallback to performer
 

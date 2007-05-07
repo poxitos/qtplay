@@ -38,7 +38,7 @@ NSString				*const kVersionFormat		= @"qtplay v%d.%d.%d%@%@ (c) 2006 ritchie arg
 const UInt8				kVersionMajor				= 1;
 const UInt8				kVersionMinor				= 4;
 const UInt8				kVersionRevision			= 0;
-NSString				*const kVersionStatus		= @"pre9";
+NSString				*const kVersionStatus		= @"";
 
 #if defined(LATIN1)
 NSString				*const kVersionEncoding		= @"(latin1)";

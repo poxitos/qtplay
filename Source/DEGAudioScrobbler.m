@@ -123,12 +123,14 @@ pathForDataFile {
 */
 -(void)
 submit:(QTMovie *) aMovie {
+	movie = [aMovie retain];													// must retain whether or not we submit,
+																				// as the movie will be later released in
+																				// releaseMovie
+
 	if ([aMovie durationInSeconds] < 30) {										// audioscrobbler spec: songs must be at least 30s long
 		return;
 	}
-	
-	movie = [aMovie retain];
-	
+		
 	//NSTimeInterval postTime = 5;
 	NSTimeInterval postTime = MIN(240, [movie durationInSeconds] / 2);			// audioscrobbler spec: post in 240s or duration / 2, whichever comes first
 	[self performSelector:@selector(addToCache) withObject:nil afterDelay:postTime];
