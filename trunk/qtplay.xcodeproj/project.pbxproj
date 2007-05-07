@@ -112,7 +112,7 @@
 
 /* Begin PBXFileReference section */
 		08FB779EFE84155DC02AAC07 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
-		8DD76FA10486AA7600D96B5E /* qtplay */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = "compiled.mach-o.executable"; path = qtplay; sourceTree = BUILT_PRODUCTS_DIR; };
+		8DD76FA10486AA7600D96B5E /* qtplay */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = qtplay; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA1BCD150ABE392200A58D7B /* NSPrintf.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = NSPrintf.h; sourceTree = "<group>"; };
 		BA1BCD160ABE392200A58D7B /* NSPrintf.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = NSPrintf.m; sourceTree = "<group>"; };
 		BA1BCD170ABE392200A58D7B /* NSString_Digest.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = NSString_Digest.h; sourceTree = "<group>"; };
