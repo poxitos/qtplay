@@ -34,7 +34,7 @@
 #import "consts.h"
 
 
-NSString				*const kVersionFormat		= @"qtplay v%d.%d.%d%@%@ (c) 2006 ritchie argue\nbased on Quicktime Player by Sarah Childers\nqtplay uses argtable by Stewart Heitmann, licensed under the LGPL";
+NSString				*const kVersionFormat		= @"qtplay v%d.%d.%d%@%@ (c) 2006-2007 Ritchie Argue\nbased on Quicktime Player by Sarah Childers\nqtplay uses argtable by Stewart Heitmann, licensed under the LGPL";
 const UInt8				kVersionMajor				= 1;
 const UInt8				kVersionMinor				= 4;
 const UInt8				kVersionRevision			= 0;
