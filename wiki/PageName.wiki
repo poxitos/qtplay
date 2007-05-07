@@ -2,11 +2,11 @@
 
 = Introduction =
 
-Linking qtplay with a static version of argtable is tricky due to a bug in XCode. Although the project specifies libargtable2.a as the library to link against, XCode tries to link against libargtable2.dylib. This causes problems when building a Universal binary of qtplay.
+Linking qtplay with argtable is tricky due to a bug in XCode and the way autoconf-based projects are built as Universals. Although the project specifies libargtable2.a as the library to link against, XCode tries to link against libargtable2.dylib. This can cause problems when building a Universal binary of qtplay.
 
 = Details =
 
-Begin by building a Universal Binary of [http://argtable.sourceforge.net/ argtable]. This is done by following the instructions in [http://developer.apple.com/technotes/tn2005/tn2137.html tech note 2137].
+Begin by building a Universal Binary of [http://argtable.sourceforge.net/ argtable]. This is done by following the instructions in [http://developer.apple.com/technotes/tn2005/tn2137.html tech note 2137]. Roughly:
 
 {{{
 setenv CFLAGS "-O -g -isysroot /Developer/SDKs/MacOSX10.4u.sdk -arch ppc -arch i386"
