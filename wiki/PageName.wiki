@@ -1,12 +1,24 @@
-#summary How to build qtplay
+#summary Statically linking with argtable
 
 = Introduction =
 
-The only tricky step to building qtplay is first building argtable.
-
+Linking qtplay with a static version of argtable is tricky due to a bug in XCode. Although the project specifies libargtable2.a as the library to link against, XCode tries to link against libargtable2.dylib. This causes problems when building a Universal binary of qtplay.
 
 = Details =
 
-To build argtable, first download it from http://argtable.sourceforge.net/
-Next, configure your build environment to create a Universal Binary of argtable, following the instructions here:
-http://developer.apple.com/technotes/tn2005/tn2137.html
+Begin by building a Universal Binary of [http://argtable.sourceforge.net/ argtable]. This is done by following the instructions in [http://developer.apple.com/technotes/tn2005/tn2137.html tech note 2137].
+
+{{{
+setenv CFLAGS "-O -g -isysroot /Developer/SDKs/MacOSX10.4u.sdk -arch ppc -arch i386"
+setenv LDFLAGS "-arch ppc -arch i386"
+./configure --disable-dependency-tracking
+sudo make install
+}}}
+
+On my machine, this builds a Universal static lib (libargtable2.a), but the libargtable2.dylib is single architecture. I'm not sure why this is. If qtplay is built at this point, XCode will complain that it can't link against argtable for the i386 version. This is because it is looking in the dylib. Either delete the dylib, or don't build it in the first place.
+
+{{{
+sudo rm /usr/local/lib/libargtable2*.dylib
+}}}
+
+Now a Universal build of qtplay should work.
